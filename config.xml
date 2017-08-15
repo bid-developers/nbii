@@ -2,7 +2,7 @@
 <widget id="com.nbii.inspire" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>NBII</name>
     <description>This is the NBII Application.</description>
-    <author email="support@nbii.com" href="http://www.nbii.com/">NBII App Ionic Developers</author>
+    <author email="support@nbii.com.na" href="http://www.nbii.com/">NBII App Ionic Developers</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
