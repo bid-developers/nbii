@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Nav } from 'ionic-angular';
+import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NewsPage } from '../pages/news/news';
 import { EventsPage } from '../pages/events/events';
@@ -25,6 +26,7 @@ export class MyApp {
     });
 
       this.pages = [
+          { title: 'Login', component: LoginPage, icon: 'home' },
           { title: 'Main Menu', component: TabsPage, icon: 'home' },
 //        { title: '', component: GalleryTabPage, icon: 'images'  },
 //        { title: 'About', component: HomePage, icon: 'home'  },

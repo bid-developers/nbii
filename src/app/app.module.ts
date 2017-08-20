@@ -10,6 +10,7 @@ import { NewsPage } from '../pages/news/news';
 import {FIREBASE_CREDENTIALS } from './app.firebase.config';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EventsPage } from '../pages/events/events';
+import { LoginPage } from '../pages/login/login';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { EventsPage } from '../pages/events/events';
     HomePage,
     NewsPage,
       TabsPage,
-      EventsPage
+      EventsPage,
+      LoginPage
       
   ],
   imports: [
@@ -32,7 +34,9 @@ import { EventsPage } from '../pages/events/events';
     HomePage,
       NewsPage,
       TabsPage,
-      EventsPage
+      EventsPage,
+      LoginPage
+
   ],
   providers: [
     StatusBar,
