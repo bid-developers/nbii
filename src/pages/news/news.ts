@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AngularFireDatabase } from 'angularfire2/database'
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'page-news',
@@ -8,8 +9,9 @@ import { AngularFireDatabase } from 'angularfire2/database'
 })
 export class NewsPage {
 
+  news: FirebaseListObservable<any[]>;
   constructor(public navCtrl: NavController, db: AngularFireDatabase) {
-
+    this.news = db.list('/news');
   }
 
 }
