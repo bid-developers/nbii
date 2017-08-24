@@ -7,19 +7,19 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card *ngFor="let news of news | async">
-      <img src={{news.photoUrl}}/>
-      <ion-card-content>
-        <ion-card-title>
+  <ion-card *ngFor="let news of news | async">
+    <img src={{news.photoUrl}}/>
+    <ion-card-content>
+      <ion-card-title>
 
-          {{news.title}}
+        {{news.title}}
 
-        </ion-card-title>
+      </ion-card-title>
 
-        <div [innerHTML] ="news.description"></div>
-
+      <div [innerHTML]="news.description"></div>
+      <div text-right>
         {{news.date}}
-        
-      </ion-card-content>
-    </ion-card>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
