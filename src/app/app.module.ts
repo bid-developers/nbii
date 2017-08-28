@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { EventsPage } from '../pages/events/events';
 import { LoginPage } from '../pages/login/login';
 import { ServicesPage } from '../pages/services/services';
+import { ChatPage } from '../pages/chat/chat';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ServicesPage } from '../pages/services/services';
       TabsPage,
       EventsPage,
       ServicesPage,
+      ChatPage,
       LoginPage
       
   ],
@@ -39,6 +41,7 @@ import { ServicesPage } from '../pages/services/services';
       NewsPage,
       TabsPage,
       ServicesPage,
+      ChatPage,
       EventsPage,
       LoginPage
 
