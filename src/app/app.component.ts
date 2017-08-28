@@ -17,7 +17,7 @@ import { EventsPage } from '../pages/events/events';
 })
 
 export class MyApp {
-    @ViewChild(Nav)  nav: Nav;
+    @ViewChild(Nav) nav: Nav;
     rootPage:any = TabsPage;
     pages: Array<{title: string, component: any, icon: any}>;
 

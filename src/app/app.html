@@ -1,1 +1,25 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+<ion-header class="img" align="center">
+    <img padding src="assets/img/smalllogo.png"/>
+    <ion-toolbar color="amigold">
+        <ion-title text-wrap >NBII</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="my-container" >
+
+    <ion-list class="transp">
+        <button menuClose color="amiblue" ion-item *ngFor="let p of pages" (click)="openPage(p)"  class="transp"><ion-icon  name={{p.icon}} padding-right></ion-icon>
+        {{p.title}}
+        </button>
+    </ion-list>
+    <div><img src="assets/bg.jpg"></div>
+</ion-content>
+
+
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
