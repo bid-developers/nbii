@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController  } from 'ionic-angular';
+import { NavController, AlertController  } from 'ionic-angular';
 import { FirebaseListObservable,
     FirebaseObjectObservable,
     AngularFireDatabase
 } from 'angularfire2/database';
 
 //import {UserInfoService} from '../../services/userInfo.service';
-//import firebase from 'firebase';
+import firebase from 'firebase';
 
 @Component({
   selector: 'page-chat',
@@ -18,38 +18,50 @@ export class ChatPage {
 
 
 
-   items: FirebaseListObservable <any[]>;
+    items: FirebaseListObservable <any[]>;
+    item: FirebaseObjectObservable <any>;
         email:any;
     username: any;
     timestamp:any;
     amidisplayname:any;
+    newmessage:any;
     //email:(window.localStorage.getItem('displayname'));
 
 
     constructor(public navCtrl:NavController,
-                private navParams:NavParams,
+                /*private navParams:NavParams,*/
                 private alertCtrl:AlertController,
-                 db:AngularFireDatabase
+               public db:AngularFireDatabase
         ) {
-        this.email = (window.localStorage.getItem('displayname'));
+        //this.email = (window.localStorage.getItem('displayname'));
 //        let dateNow = db.firebase.database.ServerValue.TIMESTAMP;
 //        console.log(dateNow);
         this.items =  db.list('/nbii-chats',{
             query: {
                 orderByChild: 'score'
             }
-        });//.map((array) => array.reverse()) as FirebaseListObservable<any[]>;
-
+        });
+        this.timestamp = firebase.database.ServerValue.TIMESTAMP;
     }
 
 
     createItem(newmessage): void {
        // this.email = (window.localStorage.getItem('displayname'));
- //       this.items.push({messageText: newmessage, messageUser: "test"})
-  //      .catch(error => this.handleError(error))
-
+        this.items.push({messageText: newmessage, messageUser: "Test", messageTime: this.timestamp})
+       .catch(error => this.handleError(error))
+        this.newmessage = '';
 //        this.items.push({message: newmessage, email: this.email, displayname: this.amidisplayname, timestamp: this.timestamp })
-//            .catch(error => this.handleError(error))
+  //          .catch(error => this.handleError(error))
    }
 
+    private handleError(error){
+        //console.log(error)
+        let alert = this.alertCtrl.create({
+            title: 'Error',
+            message: 'Your password and your re-entered password does not match each other.',
+            buttons: ['OK']
+        });
+        alert.present();
+        return;
+    }
 }

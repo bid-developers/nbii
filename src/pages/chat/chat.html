@@ -1,14 +1,17 @@
-
 <ion-header>
-    <ion-navbar color="googleorange">
-        <ion-title class="title"><ion-icon align="right" name="settings" (click)="profileSettings()"></ion-icon>
-            NBII Chat
+    <ion-navbar color="navbarskypeblue">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Events
         </ion-title>
     </ion-navbar>
-    You are logged in as <b>{{email}}</b>
+</ion-header>
+
 
     <!--<div text-wrap *ng="let item of items">{{item.email}}</div>-->
-</ion-header>
+
 <ion-content padding>
 
     <!--    <a ion-item *ngFor="let item of items | async" (click)="openChat(item.$key)">
@@ -24,6 +27,8 @@
             <ion-item text-wrap *ngFor="let item of items | async">
             <ion-badge color="chattitle" item-top>{{item.messageUser}}</ion-badge>
             <div class="chat-bubble">{{item.messageText}}</div>
+            <div class="smallbadge"><ion-badge color="timebadge" item-bottom>{{item.messageTime | date:'yyyy-MM-dd HH:mm:ss'}}</ion-badge></div>
+
             </ion-item>
         </ion-list>
 
