@@ -1,61 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Events
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="amigold">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Products & Services
+        </ion-title>
+
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-card>
-        <img src="assets/img/logo.jpg"/>
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
 
-    <ion-card>
-        <img src="assets/img/logo.jpg"/>
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
+<ion-content>
 
-    <ion-card>
-        <img src="assets/img/logo.jpg"/>
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
 
-    <ion-card>
-        <img src="assets/img/logo.jpg"/>
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely
-                responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
+    <ion-list>
+        <ion-item *ngFor="let item of items | async">
+            <ion-thumbnail item-start>
+                <img src="{{item.images}}">
+            </ion-thumbnail>
+            <h2>{{item.title}}</h2>
+            <p>{{item.description}}</p>
+            <button ion-button clear item-end>View</button>
+        </ion-item>
+    </ion-list>
+
 </ion-content>
