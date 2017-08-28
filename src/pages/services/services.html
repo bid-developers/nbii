@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="amigold">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Services
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+    <ion-list>
+        <ion-item text-wrap *ngFor="let item of items | async">
+            <ion-thumbnail item-start>
+                <img src="{{item.photoUrl}}">
+            </ion-thumbnail>
+            <h2>{{item.service_name}}</h2>
+            <p>{{item.category}}</p>
+            <button ion-button clear item-end>View</button>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
