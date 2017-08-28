@@ -15,7 +15,7 @@
 
 
     <ion-list>
-        <ion-item *ngFor="let item of items | async">
+        <ion-item text-wrap *ngFor="let item of items | async">
             <ion-thumbnail item-start>
                 <img src="{{item.images}}">
             </ion-thumbnail>

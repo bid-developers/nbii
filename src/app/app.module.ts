@@ -12,6 +12,7 @@ import {FIREBASE_CREDENTIALS } from './app.firebase.config';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EventsPage } from '../pages/events/events';
 import { LoginPage } from '../pages/login/login';
+import { ServicesPage } from '../pages/services/services';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginPage } from '../pages/login/login';
     NewsPage,
       TabsPage,
       EventsPage,
+      ServicesPage,
       LoginPage
       
   ],
@@ -36,6 +38,7 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
       NewsPage,
       TabsPage,
+      ServicesPage,
       EventsPage,
       LoginPage
 
