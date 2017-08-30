@@ -14,13 +14,17 @@ import { EventsPage } from '../pages/events/events';
 import { LoginPage } from '../pages/login/login';
 import { ServicesPage } from '../pages/services/services';
 import { ChatPage } from '../pages/chat/chat';
+import { AboutPage } from '../pages/about/about';
 
+import {enableProdMode} from '@angular/core';
+enableProdMode();
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     NewsPage,
+      AboutPage,
       TabsPage,
       EventsPage,
       ServicesPage,
@@ -40,6 +44,7 @@ import { ChatPage } from '../pages/chat/chat';
     HomePage,
       NewsPage,
       TabsPage,
+      AboutPage,
       ServicesPage,
       ChatPage,
       EventsPage,

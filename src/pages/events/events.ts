@@ -14,7 +14,7 @@ import { FirebaseListObservable,
 export class EventsPage {
     items: FirebaseListObservable<any[]>;
     item: FirebaseObjectObservable<any>;
-    constructor(db: AngularFireDatabase/*, public navCtrl: NavController*/) {
+    constructor(public db: AngularFireDatabase/*, public navCtrl: NavController*/) {
 
         this.items =  db.list('/event',{
             query: {

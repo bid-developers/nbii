@@ -10,7 +10,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class NewsPage {
 
   news: FirebaseListObservable<any[]>;
-  constructor(public navCtrl: NavController, db: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
     this.news = db.list('/news');
   }
 

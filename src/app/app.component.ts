@@ -4,9 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Nav } from 'ionic-angular';
-import { LoginPage } from '../pages/login/login';
+//import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
-import { NewsPage } from '../pages/news/news';
+import { AboutPage } from '../pages/about/about';
+//import { NewsPage } from '../pages/news/news';
 import { ChatPage } from '../pages/chat/chat';
 import { ServicesPage } from '../pages/services/services';
 
@@ -35,14 +36,17 @@ export class MyApp {
 
 
       this.pages = [
-          { title: 'Login', component: LoginPage, icon: 'home' },
-          { title: 'Main Menu', component: TabsPage, icon: 'home' },
+//          { title: 'Login', component: LoginPage, icon: 'home' },
+          { title: 'News', component: TabsPage, icon: 'paper' },
 //        { title: '', component: GalleryTabPage, icon: 'images'  },
 //        { title: 'About', component: HomePage, icon: 'home'  },
-          { title: 'News', component: NewsPage, icon: 'film'  },
-          { title: 'Events', component: EventsPage, icon: 'flag'  },
+//          { title: 'News', component: NewsPage, icon: 'film'  },
+          { title: 'Events', component: EventsPage, icon: 'calendar'  },
           { title: 'Chat', component: ChatPage, icon: 'chatboxes'  },
-          { title: 'Services', component: ServicesPage, icon: 'people'  }
+          { title: 'Services', component: ServicesPage, icon: 'settings'  }
+          ,{ title: 'About Us', component: AboutPage, icon: 'bookmarks'  }
+          ,{ title: 'Sign Out', component: AboutPage, icon: 'exit'  }
+
 
 
       ];
