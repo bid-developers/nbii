@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="amigold">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            News
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let news of news | async">
+    <img src={{news.photoUrl}}/>
+    <ion-card-content>
+      <ion-card-title>
+
+        {{news.title}}
+
+      </ion-card-title>
+
+      <div [innerHTML]="news.description"></div>
+      <div text-right>
+        {{news.date}}
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

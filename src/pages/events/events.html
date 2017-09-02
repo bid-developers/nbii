@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar color="amigold">
+        <button ion-button menuToggle item-start>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Events
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+
+
+        <ion-card  no-padding text-wrap *ngFor="let item of items | async">
+
+    <ion-card-content>
+        <ion-card-title>
+            <h2>{{item.title}}</h2><p>{{item.date}}</p>
+        </ion-card-title>
+
+        <p>{{item.description}}</p>
+    </ion-card-content>
+    <img src="{{item.images}}">
+
+
+
+        <ion-row no-padding>
+            <button ion-button clear small>
+                <div>
+                    <ion-icon name='star'></ion-icon>
+                    <br>
+                    <label>INTEREST</label>
+                </div>
+            </button>
+            <button ion-button stacked clear small>
+                <div>
+                    <ion-icon name='md-checkmark'></ion-icon>
+                    <br>
+                    <label stacked >RSVP</label>
+                </div>
+            </button>
+            <button ion-button clear small>
+                <div>
+                    <ion-icon name='md-share'></ion-icon>
+                    <br>
+                    <label>SHARE</label>
+                </div>
+            </button>
+            <button ion-button clear small>
+                <div>
+                    <ion-icon name='pin'></ion-icon>
+                    <br>
+                    <label>LOCATION</label>
+                </div>
+            </button>
+        </ion-row>
+        </ion-card>
+
+</ion-content>
