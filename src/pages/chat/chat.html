@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="navbarskypeblue">
+    <ion-navbar color="nbii">
         <button ion-button menuToggle item-start>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -24,7 +24,7 @@
      -->
         <ion-list>
 
-            <ion-item text-wrap *ngFor="let item of items | async">
+            <ion-item text-wrap *ngFor="let item of (items | async)?.slice().reverse()">
             <ion-badge color="chattitle" item-top>{{item.messageUser}}</ion-badge>
             <div class="chat-bubble">{{item.messageText}}</div>
             <div class="smallbadge"><ion-badge color="timebadge" item-bottom>{{item.messageTime | date:'yyyy-MM-dd HH:mm:ss'}}</ion-badge></div>
@@ -39,6 +39,6 @@
     <ion-item>
         <ion-label floating>type here...</ion-label>
         <ion-input type="text-area" [(ngModel)]="newmessage" ionic-input-clearable ></ion-input>
-        <button color="googlered" ion-button item-right (click)="createItem(newmessage)"><ion-icon  name="send"></ion-icon></button>
+        <button color="nbii" ion-button item-right (click)="createItem(newmessage)"><ion-icon  name="send"></ion-icon></button>
     </ion-item>
 </ion-footer>

@@ -37,12 +37,12 @@ export class MyApp {
 
       this.pages = [
 //          { title: 'Login', component: LoginPage, icon: 'home' },
+          { title: 'Chat', component: ChatPage, icon: 'chatboxes'  },
           { title: 'News', component: TabsPage, icon: 'paper' },
 //        { title: '', component: GalleryTabPage, icon: 'images'  },
 //        { title: 'About', component: HomePage, icon: 'home'  },
 //          { title: 'News', component: NewsPage, icon: 'film'  },
           { title: 'Events', component: EventsPage, icon: 'calendar'  },
-          { title: 'Chat', component: ChatPage, icon: 'chatboxes'  },
           { title: 'Services', component: ServicesPage, icon: 'settings'  }
           ,{ title: 'About Us', component: AboutPage, icon: 'bookmarks'  }
           ,{ title: 'Sign Out', component: AboutPage, icon: 'exit'  }

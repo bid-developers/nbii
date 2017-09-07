@@ -7,6 +7,7 @@ import { FirebaseListObservable,
 
 //import {UserInfoService} from '../../services/userInfo.service';
 import firebase from 'firebase';
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-chat',
@@ -31,17 +32,26 @@ export class ChatPage {
     constructor(public navCtrl:NavController,
                 /*private navParams:NavParams,*/
                 private alertCtrl:AlertController,
-               public db:AngularFireDatabase
+               public db:AngularFireDatabase, public loadingCtrl: LoadingController
         ) {
         //this.email = (window.localStorage.getItem('displayname'));
 //        let dateNow = db.firebase.database.ServerValue.TIMESTAMP;
 //        console.log(dateNow);
         this.items =  db.list('/nbii-chats',{
             query: {
-                orderByChild: 'score'
+                orderByChild: 'messageTime'
             }
         });
         this.timestamp = firebase.database.ServerValue.TIMESTAMP;
+        this.presentLoading();
+
+    }
+    presentLoading() {
+        let loader = this.loadingCtrl.create({
+            content: "Chat is loading, Please wait...",
+            duration: 2000
+        });
+        loader.present();
     }
 
 

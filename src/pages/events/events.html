@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="amigold">
+    <ion-navbar color="nbii">
         <button ion-button menuToggle item-start>
             <ion-icon name="menu"></ion-icon>
         </button>
@@ -28,14 +28,14 @@
 
 
         <ion-row no-padding>
-            <button ion-button clear small>
-                <div>
+            <button ion-button clear small (tap)="interest(item.$key, item.title)">
+                <div no-padding>
                     <ion-icon name='star'></ion-icon>
                     <br>
                     <label>INTEREST</label>
                 </div>
             </button>
-            <button ion-button stacked clear small>
+            <button ion-button stacked clear small (tap)="rsvp(item.title)">
                 <div>
                     <ion-icon name='md-checkmark'></ion-icon>
                     <br>
